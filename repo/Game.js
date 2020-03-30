@@ -9,7 +9,7 @@ let DA4 =document.getElementById("answer4");
 function displayQuestion(dem) {
         let tableContent ="";
 
-        tableContent=' <tr width="80%">\n' +
+        tableContent=' <tr width="800">\n' +
             '           <td colspan="2">\n' +
             '               <h3>Câu hỏi:</h3>\n' +
             '               <p>'+q[dem].question+'</p>\n' +
@@ -27,7 +27,7 @@ function displayQuestion(dem) {
             '           <td colspan="2" width="400px"><button style="background-color: red" type="button"onclick="check('+dem+')">Chốt Đáp Án</button></td>\n' +
             '       </tr>'
         document.getElementById("myTable").innerHTML = tableContent;
-        document.getElementById("point").innerHTML ='Point :'+point;
+        document.getElementById("point").innerHTML ='Point :'+point+'VND';
         document.getElementById('level').innerHTML = 'Câu số :'+level;
 }
 
@@ -98,7 +98,7 @@ function check(dem) {
                 levelSamePoint();
                 displayQuestion(dem);
         }else {
-                alert("Bạn dừng cuộc chơi ở câu "+level+" với số tiền là "+point);
+                alert("Bạn dừng cuộc chơi ở câu "+level+" với số tiền là "+point+" VND");
                 dem=1;
                 level=1;
                 point=0;
@@ -107,18 +107,9 @@ function check(dem) {
         }
 }
 
-function check5050() {
-        let listAnswerWrong = [];
-        let index ;
-        for (let i=1;i<=4;i++){
-              if (answer===q[i].correct)
-                      continue;
-              listAnswerWrong[i] = document.getElementById("answer"+i);
-        }
-        for (let i=1;i<3;i++){
-                index =Math.floor(Math.random()*3);
-                listAnswerWrong.splice(index,1);
-        }
+
+function check5050(dem) {
+
 }
 
 
