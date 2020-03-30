@@ -15,16 +15,16 @@ function displayQuestion(dem) {
             '               <p>'+q[dem].question+'</p>\n' +
             '           </td>\n' +
             '       </tr> \n' +
-            '       <tr width="80%">\n' +
-            '           <label><td id="td1" onclick="pick(1)"> <p id="answer1">'+q[dem].A+'</p></td></label>\n' +
-            '           <label><td id="td2" width="40%" onclick="pick(2)"> <p id="answer2">'+q[dem].B+'</p></td></label>\n' +
+            '       <tr width="800px">\n' +
+            '           <label><td width="400px" id="td1" onclick="pick(1)"> <p id="answer1">'+q[dem].A+'</p></td></label>\n' +
+            '           <label><td id="td2" width="400px" onclick="pick(2)"> <p id="answer2">'+q[dem].B+'</p></td></label>\n' +
             '       </tr>\n' +
-            '       <tr width="80%">\n' +
-            '           <label><td id="td3" width="40%" onclick="pick(3)"><p id="answer3"> '+q[dem].C+'</p></td></label>\n' +
-            '           <label><td id="td4" width="40%" onclick="pick(4)"><p id="answer4">'+q[dem].D+'</p></td></label>\n' +
+            '       <tr width="800px">\n' +
+            '           <label><td id="td3" width="400px" onclick="pick(3)"><p id="answer3"> '+q[dem].C+'</p></td></label>\n' +
+            '           <label><td id="td4" width="400px" onclick="pick(4)"><p id="answer4">'+q[dem].D+'</p></td></label>\n' +
             '       </tr>\n' +
-            '       <tr width="80%">\n' +
-            '           <td colspan="2" width="40%"><button style="background-color: red" type="button"onclick="check('+dem+')">Chốt Đáp Án</button></td>\n' +
+            '       <tr width="800px">\n' +
+            '           <td colspan="2" width="400px"><button style="background-color: red" type="button"onclick="check('+dem+')">Chốt Đáp Án</button></td>\n' +
             '       </tr>'
         document.getElementById("myTable").innerHTML = tableContent;
         document.getElementById("point").innerHTML ='Point :'+point;
@@ -106,6 +106,21 @@ function check(dem) {
                 displayQuestion(dem);
         }
 }
+
+function check5050() {
+        let listAnswerWrong = [];
+        let index ;
+        for (let i=1;i<=4;i++){
+              if (answer===q[i].correct)
+                      continue;
+              listAnswerWrong[i] = document.getElementById("answer"+i);
+        }
+        for (let i=1;i<3;i++){
+                index =Math.floor(Math.random()*3);
+                listAnswerWrong.splice(index,1);
+        }
+}
+
 
 
 

@@ -18,19 +18,20 @@
            max-width: 80%;
            margin: auto;
            text-align: center;
+           position: absolute;
        }
         tr{
            max-width: 80%;
         }
     </style>
 </head>
-<body class="all" onload="displayQuestion(1)">
+<body class="all" onload="displayQuestion(1)" >
 <div id="game">
     <img src="imgALTP.png" alt="">
     <p id="point" style="background-color: greenyellow;width: 30px;text-align: center"></p>
     <p id="level" style="background-color: greenyellow ;width: 50px"></p>
     <img src="ClassicPAF.png" alt="" onclick="" width="100px" height="50px">
-    <img src="WWTBAM-Lifelines-50-50.png" alt="" onclick="" width="100px" height="50px">
+    <img src="WWTBAM-Lifelines-50-50.png" alt="" onclick="check5050()" width="100px" height="50px">
     <img src="Hỏi_tổ_tư_vấn_ở_trường_quay_(nền_xanh).png" alt="" onclick="" width="100px" height="50px">
     <table id="myTable">
     </table>
