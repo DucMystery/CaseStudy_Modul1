@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tạo game Ai là Triệu Phú</title>
+    <script src="ListQuestion.js"></script>
+    <style>
+        td{
+            border: 1px solid black;
+            width: 22%;
+            height: 50px;
+            background-color: royalblue;
+            margin: 100px;
+            text-align: center;
+            border-radius: 20%;
+        }
+       .all{
+           max-width: 80%;
+           margin: auto;
+           text-align: center;
+       }
+        tr{
+           max-width: 80%;
+        }
+    </style>
+</head>
+<body class="all" onload="displayQuestion(1)">
+<div id="game">
+    <img src="imgALTP.png" alt="">
+    <p id="point" style="background-color: greenyellow;width: 30px;text-align: center"></p>
+    <p id="level" style="background-color: greenyellow ;width: 50px"></p>
+    <img src="ClassicPAF.png" alt="" onclick="" width="100px" height="50px">
+    <img src="WWTBAM-Lifelines-50-50.png" alt="" onclick="" width="100px" height="50px">
+    <img src="Hỏi_tổ_tư_vấn_ở_trường_quay_(nền_xanh).png" alt="" onclick="" width="100px" height="50px">
+    <table id="myTable">
+    </table>
+</div>
+<script src="Game.js"></script>
+</body>
+</html>
