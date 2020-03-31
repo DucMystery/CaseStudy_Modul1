@@ -1,12 +1,5 @@
 let q =[];
-q[0] = {
-    question:" Giải Grand Slam đầu tiên trong năm là giải nào?",
-    A:"Austrlia mở rộng",
-    B:" Wimbledon",
-    C:"Roland Garos",
-    D:"Mỹ mở rộng",
-    correct:1,
-};
+
 q[1] = {
     question: "Sau chiến tranh thế giới 2, phong trào giải phóng dân tộc nổi lên mạnh nhất ở đâu?",
     A:"Châu Âu",
