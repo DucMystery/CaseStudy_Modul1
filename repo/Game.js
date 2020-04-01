@@ -30,6 +30,7 @@ function displayQuestion(dem) {
     document.getElementById("myTable").innerHTML = tableContent;
     document.getElementById("point").innerHTML = 'Point :' + point + 'VND';
     document.getElementById('level').innerHTML = 'Câu số :' + level;
+    setTime(dem);
 }
 
 
@@ -87,6 +88,13 @@ function levelSamePoint() {
 
 function pick(dem) {
     document.getElementById("td" + dem).style.backgroundColor = "yellow";
+    if (document.getElementById("td"+dem).style.backgroundColor="yellow"){
+        for (let i=1;i<5;i++){
+            if (i===dem)
+                continue;
+            document.getElementById("td"+i).style.backgroundColor ="royalblue";
+        }
+    }
     answer = dem;
 }
 
@@ -98,6 +106,7 @@ function check(dem) {
         level++;
         levelSamePoint();
         displayQuestion(dem);
+
     } else {
         alert("Bạn dừng cuộc chơi ở câu " + level + " với số tiền là " + point + " VND");
         dem = 1;
@@ -108,40 +117,6 @@ function check(dem) {
     }
 }
 
-
-function check5050(dem) {
-    let index = 0;
-    for (let i = 0; i < q[dem].wrong.length - 1; i++) {
-        index = Math.floor((Math.random() + 1) * 4);
-        if (index === document.getElementById("answer" + index) && index !== q[dem].correct) {
-            document.getElementById("answer" + index).value.splice(index, 1);
-        }
-    }
-}
-
-let flag = false;
-
-function teleSupport(dem) {
-    let index;
-    let chinhxac;
-    chinhxac = q[dem].correct;
-    index = Math.floor(Math.random() * 5);
-    if (Math.random() <0.5) {
-        for (let i = 1; i < 5; i++) {
-            if (i === chinhxac && flag === false) {
-                pick(i);
-                flag = true;
-            }
-        }
-
-    } else if (Math.random() >= 0.5 && Math.random() < 1) {
-        let i = Math.floor(Math.random() * 4);
-        if (i !== chinhxac && flag === false) {
-            pick(i);
-            flag = true;
-        }
-    }
-}
 
 
 
