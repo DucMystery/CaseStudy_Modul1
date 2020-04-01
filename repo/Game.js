@@ -30,7 +30,6 @@ function displayQuestion(dem) {
     document.getElementById("myTable").innerHTML = tableContent;
     document.getElementById("point").innerHTML = 'Point :' + point + 'VND';
     document.getElementById('level').innerHTML = 'Câu số :' + level;
-    setTime(dem);
 }
 
 
@@ -112,7 +111,7 @@ function check(dem) {
         dem = 1;
         level = 1;
         point = 0;
-        counter =30;
+        counter = 30;
         levelSamePoint();
         displayQuestion(dem);
 

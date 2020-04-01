@@ -1,27 +1,24 @@
 function check5050(dem) {
-    let index = 1;
+    let index = 0;
     let listAnswer = [];
-    let ramdom;
+    let wrongListAnswer = [];
+
+    let random;
     if (alert("Bạn Muốn dùng trợ giúp 50/50 ?") === true) {
         for (let i = 1; i < 5; i++) {
-            if (i === q[dem].correct)
-                continue;
-            listAnswer[index] = document.getElementById("answer" + i);
-            index++;
-            console.log(listAnswer[index]);
+            if (i === q[dem].correct) {
+                return wrongListAnswer = listAnswer.splice(i, 1);
+            }
         }
-
-        for (let i = 1; i < 3; i++) {
-            ramdom = Math.floor(Math.random() * 4);
-            if (ramdom > 0) {
-                for (let j = 1; j < 5; j++) {
-                    if (listAnswer[ramdom] === document.getElementById("answer" + j)) {
-                        document.getElementById("answer" + j).value = "";
-                        break;
-                    }
+        for (let i = 0; i < 2; i++) {
+            for (let j = 1; j <= wrongListAnswer.length; j++) {
+                random = Math.floor(Math.random() * wrongListAnswer.length);
+                if (listAnswer[random] === document.getElementById("answer" + j)) {
+                    document.getElementById("answer" + j).value = "";
+                    listAnswer.splice(random,1);
+                    break;
                 }
             }
-            displayQuestion(dem);
         }
     }
 }

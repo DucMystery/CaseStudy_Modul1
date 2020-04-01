@@ -6,6 +6,7 @@ function setTime(dem) {
     counter--;
     timeOut = setTimeout(setTime, 1000);
     if (counter === -1) {
+        clearTimeout(timeOut);
         alert("Hết Giờ!");
         alert("Bạn dừng cuộc chơi ở câu " + level + " với số tiền là " + point + " VND");
         window.location.reload();
