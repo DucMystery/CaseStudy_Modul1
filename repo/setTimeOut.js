@@ -1,6 +1,6 @@
+
 let timeOut;
 let counter = 30;
-
 function setTime(dem) {
     document.getElementById("s").innerHTML = counter + "";
     counter--;

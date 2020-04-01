@@ -6,9 +6,16 @@ td{
     text-align: center;
     border-radius: 20%;
 }
+span{
+    background-color: greenyellow;
+    text-align: right;
+}
 .all{
     margin: auto;
     text-align: center;
-    background-color: silver;
+    width: 1000px;
+}
+#game{
+    background-color: darkcyan;
     width: 1000px;
 }

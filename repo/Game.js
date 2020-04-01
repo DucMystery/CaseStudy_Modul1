@@ -104,16 +104,18 @@ function check(dem) {
     if (answer === q[dem].correct) {
         dem++;
         level++;
+        counter =30;
         levelSamePoint();
         displayQuestion(dem);
-
     } else {
         alert("Bạn dừng cuộc chơi ở câu " + level + " với số tiền là " + point + " VND");
         dem = 1;
         level = 1;
         point = 0;
+        counter =30;
         levelSamePoint();
         displayQuestion(dem);
+
     }
 }
 

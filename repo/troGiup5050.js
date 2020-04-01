@@ -21,6 +21,7 @@ function check5050(dem) {
                     }
                 }
             }
+            displayQuestion(dem);
         }
     }
 }
