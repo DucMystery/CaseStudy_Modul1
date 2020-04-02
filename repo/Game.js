@@ -1,7 +1,6 @@
 let answer = "";
 let level = 1;
 let point = 0;
-let dem = 1;
 let DA1 = document.getElementById("answer1");
 let DA2 = document.getElementById("answer2");
 let DA3 = document.getElementById("answer3");
@@ -17,12 +16,12 @@ function displayQuestion(dem) {
         '           </td>\n' +
         '       </tr> \n' +
         '       <tr width="800px">\n' +
-        '           <label><td width="400px" id="td1" onclick="pick(1)"> <p id="answer1">' + q[dem].A + '</p></td></label>\n' +
-        '           <label><td id="td2" width="400px" onclick="pick(2)"> <p id="answer2">' + q[dem].B + '</p></td></label>\n' +
+        '           <label><td width="400px" id="td0" onclick="pick(0)"> <p id="answer0">' + q[dem].A + '</p></td></label>\n' +
+        '           <label><td id="td1" width="400px" onclick="pick(1)"> <p id="answer1">' + q[dem].B + '</p></td></label>\n' +
         '       </tr>\n' +
         '       <tr width="800px">\n' +
-        '           <label><td id="td3" width="400px" onclick="pick(3)"><p id="answer3"> ' + q[dem].C + '</p></td></label>\n' +
-        '           <label><td id="td4" width="400px" onclick="pick(4)"><p id="answer4">' + q[dem].D + '</p></td></label>\n' +
+        '           <label><td id="td2" width="400px" onclick="pick(2)"><p id="answer2"> ' + q[dem].C + '</p></td></label>\n' +
+        '           <label><td id="td3" width="400px" onclick="pick(3)"><p id="answer3">' + q[dem].D + '</p></td></label>\n' +
         '       </tr>\n' +
         '       <tr width="800px">\n' +
         '           <td colspan="2" width="400px"><button style="background-color: red" type="button"onclick="check(' + dem + ')">Chốt Đáp Án</button></td>\n' +
@@ -88,7 +87,7 @@ function levelSamePoint() {
 function pick(dem) {
     document.getElementById("td" + dem).style.backgroundColor = "yellow";
     if (document.getElementById("td"+dem).style.backgroundColor="yellow"){
-        for (let i=1;i<5;i++){
+        for (let i=0;i<4;i++){
             if (i===dem)
                 continue;
             document.getElementById("td"+i).style.backgroundColor ="royalblue";
