@@ -1,9 +1,9 @@
 let flag1 = false;
 
-function khanGia(dem) {
+function khanGia() {
     let index;
     let correct;
-    correct = q[dem].correct;
+    correct = q[level].correct;
     index = Math.random() ;
     console.log(Math.random());
     if (index <=0.5) {

@@ -1,9 +1,8 @@
 let flag2 = false;
-function check5050(dem) {
+function check5050() {
     let listAnswer = [];
-    let wrongListAnswer = [];
     let index = 0;
-    let correct = q[dem].correct;
+    let correct = q[level].correct;
 
     for (let i=0;i<4;i++){
         if (i===correct)
